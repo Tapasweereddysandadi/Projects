@@ -1,0 +1,359 @@
+```css
+/* ==============================
+   BASIC STYLES
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+
+/* ==============================
+   TASK INPUT
+   ============================== */
+
+.input-box {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+#taskInput {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+#taskInput:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+
+/* ==============================
+   ADD BUTTON
+   ============================== */
+
+.input-box button {
+    background-color: #4CAF50;
+}
+
+.input-box button:hover {
+    background-color: #45a049;
+}
+
+
+/* ==============================
+   DATE
+   ============================== */
+
+.date-box {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-box label {
+    font-weight: bold;
+}
+
+#taskDate {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 140px;
+    outline: none;
+}
+
+#taskDate:focus {
+    border-color: #4CAF50;
+}
+
+
+/* ==============================
+   TASK LIST
+   ============================== */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f8f8f8;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    border: 1px solid #eee;
+}
+
+
+/* Task name and date */
+
+.task-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-name {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    word-wrap: break-word;
+}
+
+.task-date {
+    display: block;
+    font-size: 13px;
+    color: #777;
+    margin-top: 5px;
+}
+
+
+/* ==============================
+   COMPLETE BUTTON
+   ============================== */
+
+.complete-btn {
+    background-color: #2196F3;
+}
+
+.complete-btn:hover {
+    background-color: #1976D2;
+}
+
+
+/* ==============================
+   DELETE BUTTON
+   ============================== */
+
+.delete-btn {
+    background-color: #f44336;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+
+/* ==============================
+   COMPLETED TASK
+   ============================== */
+
+.completed .task-name {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.completed .task-date {
+    color: #aaa;
+}
+
+
+/* ==============================
+   TABLET
+   768px AND BELOW
+   ============================== */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 600px;
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #taskInput {
+        font-size: 16px;
+    }
+
+    li {
+        padding: 12px;
+    }
+
+}
+
+
+/* ==============================
+   MOBILE
+   600px AND BELOW
+   ============================== */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 12px;
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .input-box {
+        gap: 7px;
+    }
+
+    #taskInput {
+        padding: 11px;
+        font-size: 15px;
+    }
+
+    .input-box button {
+        padding: 10px 13px;
+    }
+
+    .date-box {
+        margin-top: 12px;
+    }
+
+    #taskDate {
+        width: 135px;
+        padding: 9px;
+        font-size: 14px;
+    }
+
+    li {
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .task-name {
+        font-size: 14px;
+    }
+
+    .task-date {
+        font-size: 12px;
+    }
+
+    .complete-btn,
+    .delete-btn {
+        padding: 7px 8px;
+        font-size: 12px;
+    }
+
+}
+
+
+/* ==============================
+   SMALL MOBILE
+   400px AND BELOW
+   ============================== */
+
+@media screen and (max-width: 400px) {
+
+    body {
+        padding: 8px;
+        padding-top: 20px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .input-box {
+        gap: 5px;
+    }
+
+    #taskInput {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .input-box button {
+        padding: 9px 10px;
+        font-size: 13px;
+    }
+
+    .date-box {
+        flex-wrap: wrap;
+    }
+
+    #taskDate {
+        width: 130px;
+    }
+
+    li {
+        flex-wrap: wrap;
+    }
+
+    .task-content {
+        width: 100%;
+        flex-basis: 100%;
+        margin-bottom: 5px;
+    }
+
+    .complete-btn,
+    .delete-btn {
+        flex: 1;
+        padding: 8px 5px;
+    }
+
+}
+```
